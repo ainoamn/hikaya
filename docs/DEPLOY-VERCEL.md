@@ -1,5 +1,9 @@
 # نشر حكاية على Vercel
 
+**الرابط الحالي للإنتاج:** https://hikaya-nine.vercel.app  
+**لوحة المشروع:** https://vercel.com/bhdom89-8158s-projects/hikaya  
+**المستودع المرتبط:** https://github.com/ainoamn/hikaya
+
 ## المتطلبات
 
 - حساب GitHub يملك أو يصل إلى `ainoamn/hikaya`
