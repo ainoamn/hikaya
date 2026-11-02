@@ -27,7 +27,12 @@
 2. في Vercel استورد المستودع.
 3. Build Command: npm run build
 4. Output Directory: dist
-راجع docs/DEPLOY-VERCEL.md و docs/DOCUMENTATION.md للتفاصيل.
+راجع:
+- docs/PROJECT-VISION.md لفكرة المشروع الكاملة
+- docs/DEVELOPMENT-PLAN.md و docs/phases/ لخطة التطوير وكل المسارات
+- docs/ARCHITECTURE.md و platform/ لهيكل المنصة المستقبلية
+- docs/DEPLOY-VERCEL.md و docs/DOCUMENTATION.md للتفاصيل التقنية والنشر
+- على الموقع: /privacy.html و /terms.html و /status.html و /api/health
 
 الحالة الحالية:
 الموقع نسخة واجهة تفاعلية؛ الدفع والطباعة والشحن وتوليد الصور والفيديو عبر خدمات خارجية غير مفعّلة.

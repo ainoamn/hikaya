@@ -6,6 +6,9 @@ const root = fileURLToPath(new URL('..', import.meta.url));
 const dist = path.join(root, 'dist');
 const required = [
   'index.html',
+  'privacy.html',
+  'terms.html',
+  'status.html',
   'styles.css',
   'atelier.css',
   'app.js',

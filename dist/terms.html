@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الشروط | حكاية</title>
+<link rel="icon" type="image/svg+xml" href="assets/hikaya-symbol.svg">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#164d42;--paper:#fff9eb;--muted:#5f6b63}
+*{box-sizing:border-box}body{margin:0;font-family:"Noto Sans Arabic","DM Sans",sans-serif;background:linear-gradient(180deg,#f7f3ea,#fff9eb);color:var(--ink);line-height:1.9}
+.wrap{max-width:760px;margin:0 auto;padding:28px 20px 64px}a{color:var(--ink);font-weight:700}
+.brand{display:inline-flex;gap:10px;align-items:center;text-decoration:none;margin-bottom:28px}
+.brand img{width:36px;height:36px}h1{font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 8px}.en{font-family:"DM Sans",sans-serif;letter-spacing:.08em;color:#796746;font-size:.85rem}
+.card{background:rgba(255,255,255,.72);border:1px solid rgba(22,77,66,.12);border-radius:18px;padding:22px 22px 8px}
+h2{font-size:1.05rem;margin:22px 0 6px}p,li{color:var(--muted)}.note{background:#f8e8e2;border-radius:12px;padding:12px 14px;color:var(--ink)}
+.lang{display:flex;gap:8px;margin:18px 0}button{border:0;border-radius:999px;padding:8px 14px;background:#164d42;color:#fff;font:inherit;cursor:pointer}button.secondary{background:#fff;color:#164d42;border:1px solid rgba(22,77,66,.2)}
+.en-block{display:none}body.en .ar-block{display:none}body.en .en-block{display:block}body.en{direction:ltr;font-family:"DM Sans","Noto Sans Arabic",sans-serif}
+</style>
+</head>
+<body>
+<main class="wrap">
+<a class="brand" href="/"><img src="assets/hikaya-symbol.svg" alt=""><span>حكاية · HIKAYA</span></a>
+<div class="lang"><button type="button" id="toAr">عربي</button><button type="button" class="secondary" id="toEn">EN</button></div>
+<section class="card ar-block">
+<h1>شروط الاستخدام</h1>
+<p class="en">TERMS · نسخة تجريبية ٢ نوفمبر ٢٠٢٦</p>
+<p class="note">الأسعار وخيارات الدفع والطباعة والشحن في الواجهة توضيحية وغير مفعّلة. لن يُحصَّل أي مبلغ عبر هذا النموذج.</p>
+<h2>طبيعة الخدمة الحالية</h2>
+<p>حكاية تقدّم تجربة تفاعلية لمعاينة قصص أطفال مخصّصة. توليد الصور/الفيديو بالذكاء الاصطناعي الحي، والحسابات السحابية، والدفع، والطباعة التجارية غير مضمونة في هذه النسخة.</p>
+<h2>المحتوى</h2>
+<ul>
+<li>القصص الخيالية للتسلية والقيم العمرية المناسبة.</li>
+<li>القراءات التاريخية مفصولة عن الخيال وتشمل روابط مصادر؛ راجعها قبل الاعتماد التعليمي الرسمي.</li>
+<li>التشابه البصري مع الأطفال تقريبي كرتوني وليس بصمة هوية.</li>
+</ul>
+<h2>مسؤوليتك</h2>
+<p>أنت تؤكد أنك ولي أمر أو وصي عند استخدام بيانات طفل، وأنك لن ترفع محتوى غير قانوني أو مؤذيًا.</p>
+<h2>إخلاء مسؤولية</h2>
+<p>تُقدَّم النسخة التجريبية «كما هي» دون ضمان توفر أو ملاءمة لغرض معيّن. عند الإطلاق التجاري ستُستبدل هذه الصفحة بشروط ملزمة محدّثة.</p>
+<p><a href="/">← العودة إلى حكاية</a> · <a href="/privacy.html">الخصوصية</a> · <a href="/status.html">حالة المنتج</a></p>
+</section>
+<section class="card en-block">
+<h1>Terms of Use</h1>
+<p class="en">DEMO BUILD · 2 Nov 2026</p>
+<p class="note">Prices, payment, printing and shipping in the UI are illustrative and inactive. No charge is collected through this demo.</p>
+<h2>Current service</h2>
+<p>Hikaya provides an interactive preview of personalized children’s stories. Live AI generation, cloud accounts, payments and commercial print fulfillment are not guaranteed in this build.</p>
+<h2>Content</h2>
+<ul>
+<li>Fiction stories are for age-appropriate entertainment and values.</li>
+<li>Historical readings are separated from fiction and cite sources; review before formal educational reliance.</li>
+<li>Child likeness is approximate cartoon adaptation, not biometric matching.</li>
+</ul>
+<h2>Your responsibility</h2>
+<p>You confirm you are a parent/guardian when using a child’s data, and that you will not upload unlawful or harmful content.</p>
+<p><a href="/">← Back to Hikaya</a> · <a href="/privacy.html">Privacy</a> · <a href="/status.html">Status</a></p>
+</section>
+</main>
+<script>
+const root=document.body;
+document.getElementById('toEn').onclick=()=>root.classList.add('en');
+document.getElementById('toAr').onclick=()=>root.classList.remove('en');
+</script>
+</body>
+</html>

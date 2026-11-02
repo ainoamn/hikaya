@@ -9,14 +9,22 @@ npm run verify   # فحص الملفات + الاختبارات
 npm start        # معاينة محلية على http://localhost:4318
 ```
 
-- التوثيق الكامل: [`docs/DOCUMENTATION.md`](docs/DOCUMENTATION.md)
+- فكرة المشروع الكاملة: [`docs/PROJECT-VISION.md`](docs/PROJECT-VISION.md)
+- خطة التطوير والنواقص: [`docs/DEVELOPMENT-PLAN.md`](docs/DEVELOPMENT-PLAN.md)
+- مواصفات المراحل 0–8: [`docs/phases/README.md`](docs/phases/README.md)
+- الهندسة المستهدفة: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
+- التوثيق التقني: [`docs/DOCUMENTATION.md`](docs/DOCUMENTATION.md)
 - النشر على Vercel: [`docs/DEPLOY-VERCEL.md`](docs/DEPLOY-VERCEL.md)
 - وجوه الأبناء: [`docs/FAMILY-FACES.md`](docs/FAMILY-FACES.md)
 - فهرس الملفات: [`docs/FILES.md`](docs/FILES.md)
 - الشعار والهوية: [`BRAND.md`](BRAND.md)
+- هيكل المنصة: [`platform/README.md`](platform/README.md)
+- صحة الـ API: `/api/health`
 
 **المستودع:** https://github.com/ainoamn/hikaya  
-**جذر الاستضافة:** مجلد `dist/` (لا يحتاج بناء تجميعي؛ `npm run build` يتحقق من اكتمال الملفات فقط).
+**الموقع الحي:** https://hikaya-nine.vercel.app  
+**جذر الاستضافة:** مجلد `dist/` (لا يحتاج بناء تجميعي؛ `npm run build` يتحقق من اكتمال الملفات فقط).  
+**صفحات الامتثال:** `/privacy.html` · `/terms.html` · `/status.html`
 
 > هذه نسخة واجهة تجريبية. الدفع والطباعة التجارية وتوليد الذكاء الاصطناعي الحي غير مفعّلة.
 

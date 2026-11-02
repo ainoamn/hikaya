@@ -18,10 +18,26 @@
 
 ## docs/
 
-- `DOCUMENTATION.md` — التوثيق الشامل
+- `PROJECT-VISION.md` — فكرة المشروع ورؤيته ونموذج القيمة
+- `DEVELOPMENT-PLAN.md` — خطة التطوير الشاملة والنواقص الحالية
+- `ARCHITECTURE.md` — الهندسة المستهدفة
+- `phases/` — مواصفات تفصيلية للمراحل 0–8
+- `DOCUMENTATION.md` — التوثيق التقني الشامل
 - `DEPLOY-VERCEL.md` — خطوات GitHub + Vercel
 - `FAMILY-FACES.md` — شرح تخصيص وجوه الأبناء
 - `FILES.md` — هذا الفهرس
+
+## api/
+
+- `health.js` — نبض المنصة وحالة المراحل على Vercel
+- `README.md` — ما هو مفعّل وما هو مخطط
+
+## platform/
+
+- `schema.sql` — مخطط Postgres للمستقبل
+- `api-contracts.md` — عقود HTTP
+- `env.example` — قائمة متغيرات البيئة دون أسرار
+- `README.md` — دليل تفعيل المنصة
 
 ## scripts/
 

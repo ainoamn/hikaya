@@ -14,6 +14,13 @@
 الحالة الحالية: **واجهة تجريبية كاملة على الواجهة الأمامية**.  
 الدفع والطباعة التجارية وتوليد الصور/الفيديو عبر خدمات خارجية **غير مفعّلة** بعد.
 
+للتفاصيل الاستراتيجية والتنفيذية:
+- فكرة المشروع الكاملة: [`PROJECT-VISION.md`](PROJECT-VISION.md)
+- خطة التطوير والنواقص: [`DEVELOPMENT-PLAN.md`](DEVELOPMENT-PLAN.md)
+- مواصفات المسارات/المراحل: [`phases/README.md`](phases/README.md)
+- الهندسة: [`ARCHITECTURE.md`](ARCHITECTURE.md)
+- صفحات حيّة: `/privacy.html` · `/terms.html` · `/status.html` · `/api/health`
+
 ---
 
 ## ٢) الفكرة والمنتج

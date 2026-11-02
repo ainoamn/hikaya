@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>الخصوصية | حكاية</title>
+<link rel="icon" type="image/svg+xml" href="assets/hikaya-symbol.svg">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#164d42;--coral:#e68068;--paper:#fff9eb;--muted:#5f6b63}
+*{box-sizing:border-box}body{margin:0;font-family:"Noto Sans Arabic","DM Sans",sans-serif;background:linear-gradient(180deg,#f7f3ea,#fff9eb);color:var(--ink);line-height:1.9}
+.wrap{max-width:760px;margin:0 auto;padding:28px 20px 64px}a{color:var(--ink);font-weight:700}
+.brand{display:inline-flex;gap:10px;align-items:center;text-decoration:none;margin-bottom:28px}
+.brand img{width:36px;height:36px}h1{font-size:clamp(1.6rem,3vw,2.2rem);margin:0 0 8px}.en{font-family:"DM Sans",sans-serif;letter-spacing:.08em;color:#796746;font-size:.85rem}
+.card{background:rgba(255,255,255,.72);border:1px solid rgba(22,77,66,.12);border-radius:18px;padding:22px 22px 8px;backdrop-filter:blur(6px)}
+h2{font-size:1.05rem;margin:22px 0 6px}p,li{color:var(--muted)} .note{background:#eaf0e1;border-radius:12px;padding:12px 14px;color:var(--ink)}
+.lang{display:flex;gap:8px;margin:18px 0}button{border:0;border-radius:999px;padding:8px 14px;background:#164d42;color:#fff;font:inherit;cursor:pointer}button.secondary{background:#fff;color:#164d42;border:1px solid rgba(22,77,66,.2)}
+.en-block{display:none}body.en .ar-block{display:none}body.en .en-block{display:block}body.en{direction:ltr;font-family:"DM Sans","Noto Sans Arabic",sans-serif}
+</style>
+</head>
+<body>
+<main class="wrap">
+<a class="brand" href="/"><img src="assets/hikaya-symbol.svg" alt=""><span>حكاية · HIKAYA</span></a>
+<div class="lang"><button type="button" id="toAr">عربي</button><button type="button" class="secondary" id="toEn">EN</button></div>
+<section class="card ar-block">
+<h1>سياسة الخصوصية</h1>
+<p class="en">PRIVACY · نسخة تجريبية ٢ نوفمبر ٢٠٢٦</p>
+<p class="note">هذه نسخة واجهة تجريبية. لا تُرسل صور الأطفال أو عناوين الشحن إلى خادم حكاية في الوضع الحالي.</p>
+<h2>ما نجمعه اليوم</h2>
+<ul>
+<li>لغة الواجهة المفضّلة محليًا في متصفحك.</li>
+<li>القصص التي تحفظها في مكتبة المتصفح (`localStorage`) دون صورة الطفل.</li>
+<li>بيانات تقنية اعتيادية عبر مزوّد الاستضافة (Vercel) مثل سجلات الطلبات العامة.</li>
+</ul>
+<h2>الصور</h2>
+<p>أي صورة تختارها للمعاينة تبقى في متصفحك. الرسوم العائلية المنشورة مُعدّة مسبقًا بأسلوب كرتوني، والصور الفوتوغرافية الأصلية غير مضمّنة في المستودع.</p>
+<h2>عند تفعيل الخدمات لاحقًا</h2>
+<p>قبل استقبال صور أو مدفوعات حقيقية سنوفّر: موافقة ولي أمر مسجّلة، مدة احتفاظ واضحة، حق الحذف/التصدير، وتشفير أصول الأطفال. راجع خطة المرحلة 1 في مستودع GitHub.</p>
+<h2>تواصل</h2>
+<p>لطلبات الخصوصية بعد الإطلاق التجاري: عبر قناة الدعم المنشورة على الموقع الرسمي.</p>
+<p><a href="/">← العودة إلى حكاية</a> · <a href="/terms.html">الشروط</a> · <a href="/status.html">حالة المنتج</a></p>
+</section>
+<section class="card en-block">
+<h1>Privacy Policy</h1>
+<p class="en">DEMO BUILD · 2 Nov 2026</p>
+<p class="note">This is a frontend prototype. Child photos and shipping addresses are not uploaded to Hikaya servers in the current mode.</p>
+<h2>What we store today</h2>
+<ul>
+<li>UI language preference in your browser.</li>
+<li>Stories you save in browser `localStorage` without the child photo.</li>
+<li>Standard hosting request logs from Vercel.</li>
+</ul>
+<h2>Photos</h2>
+<p>Preview photos stay in your browser. Published family artwork is prepared cartoon-style; original family photographs are not in the repository.</p>
+<h2>When live services launch</h2>
+<p>Before accepting real photos or payments we will provide recorded parental consent, retention limits, delete/export rights, and encrypted child assets. See Phase 1 in the GitHub docs.</p>
+<p><a href="/">← Back to Hikaya</a> · <a href="/terms.html">Terms</a> · <a href="/status.html">Status</a></p>
+</section>
+</main>
+<script>
+const root=document.body;
+document.getElementById('toEn').onclick=()=>root.classList.add('en');
+document.getElementById('toAr').onclick=()=>root.classList.remove('en');
+</script>
+</body>
+</html>
