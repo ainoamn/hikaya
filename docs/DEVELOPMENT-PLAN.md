@@ -4,7 +4,7 @@
 الوضع الحالي: نموذج واجهة منشور على Vercel  
 الهدف: منصة تجارية عالمية لقصص الأطفال المخصّصة
 
-الوثائق المرتبطة: [`PROJECT-VISION.md`](PROJECT-VISION.md) · [`ARCHITECTURE.md`](ARCHITECTURE.md) · [`phases/README.md`](phases/README.md) · [`DOCUMENTATION.md`](DOCUMENTATION.md) · [`FAMILY-FACES.md`](FAMILY-FACES.md)
+الوثائق المرتبطة: [`PROJECT-VISION.md`](PROJECT-VISION.md) · [`AI-SERVICES-PLAN.md`](AI-SERVICES-PLAN.md) · [`ARCHITECTURE.md`](ARCHITECTURE.md) · [`phases/README.md`](phases/README.md) · [`DOCUMENTATION.md`](DOCUMENTATION.md) · [`FAMILY-FACES.md`](FAMILY-FACES.md)
 
 > تحديث ٢ نوفمبر ٢٠٢٦: اكتمل توثيق كل المراحل + هيكل `api/` و`platform/` + صفحات الخصوصية/الشروط/الحالة على الموقع الحي. تفعيل الدفع/AI/الحسابات ما زال يحتاج مفاتيح بيئة وخدمات خارجية.
 

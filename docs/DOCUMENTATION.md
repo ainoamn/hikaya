@@ -17,6 +17,7 @@
 للتفاصيل الاستراتيجية والتنفيذية:
 - فكرة المشروع الكاملة: [`PROJECT-VISION.md`](PROJECT-VISION.md)
 - خطة التطوير والنواقص: [`DEVELOPMENT-PLAN.md`](DEVELOPMENT-PLAN.md)
+- خطة خدمات الذكاء الاصطناعي: [`AI-SERVICES-PLAN.md`](AI-SERVICES-PLAN.md)
 - مواصفات المسارات/المراحل: [`phases/README.md`](phases/README.md)
 - الهندسة: [`ARCHITECTURE.md`](ARCHITECTURE.md)
 - صفحات حيّة: `/privacy.html` · `/terms.html` · `/status.html` · `/api/health`

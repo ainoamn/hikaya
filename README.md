@@ -11,6 +11,7 @@ npm start        # معاينة محلية على http://localhost:4318
 
 - فكرة المشروع الكاملة: [`docs/PROJECT-VISION.md`](docs/PROJECT-VISION.md)
 - خطة التطوير والنواقص: [`docs/DEVELOPMENT-PLAN.md`](docs/DEVELOPMENT-PLAN.md)
+- خطة خدمات الذكاء الاصطناعي: [`docs/AI-SERVICES-PLAN.md`](docs/AI-SERVICES-PLAN.md)
 - مواصفات المراحل 0–8: [`docs/phases/README.md`](docs/phases/README.md)
 - الهندسة المستهدفة: [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
 - التوثيق التقني: [`docs/DOCUMENTATION.md`](docs/DOCUMENTATION.md)

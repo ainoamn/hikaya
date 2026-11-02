@@ -30,6 +30,7 @@
 راجع:
 - docs/PROJECT-VISION.md لفكرة المشروع الكاملة
 - docs/DEVELOPMENT-PLAN.md و docs/phases/ لخطة التطوير وكل المسارات
+- docs/AI-SERVICES-PLAN.md لخدمات الذكاء الاصطناعي المقترحة (للتفعيل لاحقًا)
 - docs/ARCHITECTURE.md و platform/ لهيكل المنصة المستقبلية
 - docs/DEPLOY-VERCEL.md و docs/DOCUMENTATION.md للتفاصيل التقنية والنشر
 - على الموقع: /privacy.html و /terms.html و /status.html و /api/health
