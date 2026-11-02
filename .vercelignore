@@ -1,0 +1,10 @@
+*.zip
+hikaya-complete-*/
+hikaya-hosting-*/
+output/
+.openai/
+artwork-source/
+node_modules/
+.git/
+*.log
+*.tmp
