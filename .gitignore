@@ -1,0 +1,16 @@
+node_modules/
+*.zip
+.env*
+.env
+.DS_Store
+Thumbs.db
+output/
+.vercel/
+.openai/
+hikaya-complete-*/
+hikaya-hosting-*/
+*.log
+npm-debug.log*
+.idea/
+.vscode/
+*.tmp

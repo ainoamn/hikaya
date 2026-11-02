@@ -1,0 +1,36 @@
+const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
+const ctx=vm.createContext({scenePacks:{},structuredClone});
+vm.runInContext(fs.readFileSync('dist/heritage-data.js','utf8')+`;const characterById=id=>characters.find(c=>c.id===id)||characters[0];`,ctx);
+vm.runInContext(fs.readFileSync('dist/story-catalog.js','utf8')+';globalThis.original=structuredClone(storyCatalog)',ctx);
+for(const file of ['more-stories.js','gender-stories.js'])vm.runInContext(fs.readFileSync('dist/'+file,'utf8'),ctx);
+vm.runInContext('globalThis.catalog=storyCatalog;globalThis.renderText=genderText;globalThis.renderAdventure=renderAdventureText',ctx);
+assert.equal(ctx.catalog.length,42);assert.equal(new Set(ctx.catalog.map(s=>s.id)).size,42);
+for(const s of ctx.catalog)for(const l of ['ar','en'])for(const gender of ['male','female']){
+ assert.equal(s.templates[l].length,s.sequence.length);
+ for(const page of s.templates[l])assert(!/[\[\]{}]/.test(ctx.renderText(page,gender,'نور')),`Leaked token ${s.id}`);
+}
+vm.runInContext(`globalThis.historicalGirl=heritageStory('ليان',{narrative:'ibn-majid',gender:'female',storyLanguage:'ar',landmark:'sur'},characterById('sailor'));globalThis.realCharacters=characters;`,ctx);
+assert.equal(ctx.realCharacters.length,23);assert(ctx.historicalGirl.pages[4].includes('صرت ملّاحةً'));assert(ctx.historicalGirl.pages[1].includes('أحمد بن ماجد'));
+const old=ctx.catalog.find(s=>s.id==='falaj-secret');
+assert(ctx.renderText(old.templates.ar[1],'female','ليان').includes('فتحت ليان دفترها ورسمت'));
+assert(ctx.renderText(old.templates.ar[1],'male','سالم').includes('فتح سالم دفتره ورسم'));
+assert(!ctx.renderText(ctx.catalog.find(s=>s.id==='lost-pennant').templates.ar[0],'female','ليان').includes('فريقهام'));
+assert(ctx.renderAdventure('قالت صمود، ثم سأل {hero}.',old,'female','صمود','ar').includes('قالت صديقتها'));
+const voiceElements={storyVoice:{value:'ar-sa',innerHTML:'',disabled:false},listenStart:{textContent:'',disabled:false},listenPause:{textContent:'',disabled:false},voiceAvailability:{textContent:''},storyVoiceRate:{value:'0.86'},listenError:{textContent:''},listenSentence:{textContent:''},listenAllPages:{checked:false}};
+const arabic={voiceURI:'ar-sa',name:'Arabic',lang:'ar-SA',localService:true},english={voiceURI:'en',name:'English',lang:'en-US'},omani={voiceURI:'ar-om',name:'Omani Arabic',lang:'ar-OM'};
+let voices=[english,arabic,omani],spoken=[],cancels=0,timers=[];
+const synth={getVoices:()=>voices,cancel:()=>cancels++,speak:u=>spoken.push(u),addEventListener(){}};
+const dialog={open:true,addEventListener(){}};
+const voiceCtx=vm.createContext({window:{speechSynthesis:synth},speechSynthesis:synth,SpeechSynthesisUtterance:class{constructor(text){this.text=text}},document:{createElement:()=>dialog,body:{append(){}},addEventListener(){}},$:id=>voiceElements[id.slice(1)],t:(ar)=>ar,esc:s=>s,setTimeout:fn=>timers.push(fn),console});
+vm.runInContext(fs.readFileSync('dist/story-voice.js','utf8'),voiceCtx);
+assert.deepEqual(Array.from(voiceCtx.availableStoryVoices('ar'),v=>v.lang),['ar-OM','ar-SA']);
+assert.equal(voiceCtx.availableStoryVoices('en')[0].lang,'en-US');
+assert.equal(voiceCtx.pronunciationText('قال مدرك في عُمان.',{story:{language:'ar'}}),'قال مُدْرِك في عُمَان.');
+assert.equal(voiceCtx.pronunciationText('صمودية',{story:{language:'ar'}}),'صمودية');
+assert.equal(voiceCtx.pronunciationText('ليان هنا.',{story:{language:'ar',name:'ليان'},nameSound:'لَيَان'}),'لَيَان هنا.');
+assert(voiceCtx.speechSentences('مرحبًا! كيف حالك؟ هذه حكاية.').length===3);
+vm.runInContext("listeningState={story:{language:'ar',name:'مدرك',pages:['قال مدرك. ثم ابتسم.']},index:0,voices:availableStoryVoices('ar')};startStoryVoice()",voiceCtx);
+assert.equal(spoken.length,1);assert.equal(spoken[0].voice,arabic);assert.equal(spoken[0].rate,.86);assert(spoken[0].text.includes('مُدْرِك'));
+voiceCtx.stopStoryVoice();spoken[0].onend();assert.equal(timers.length,0,'A cancelled reading must not queue its next sentence');
+voices=[english];assert.equal(voiceCtx.availableStoryVoices('ar').length,0,'Never fall back to an English voice');
+console.log('PASS: 42 stories, both gender templates, friend-name collisions, Arabic-only voices, pronunciation, sentence chunks and cancellation.');

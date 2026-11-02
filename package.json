@@ -1,0 +1,35 @@
+{
+  "name": "hikaya",
+  "version": "1.0.0",
+  "private": true,
+  "description": "حكاية | Hikaya — personalized bilingual children's storybooks with Omani identity",
+  "homepage": "https://github.com/ainoamn/hikaya",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ainoamn/hikaya.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ainoamn/hikaya/issues"
+  },
+  "license": "UNLICENSED",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node server.mjs",
+    "dev": "node server.mjs",
+    "test": "node tests/editorial.test.cjs",
+    "build": "node scripts/build.mjs",
+    "verify": "node scripts/verify.mjs"
+  },
+  "keywords": [
+    "hikaya",
+    "children",
+    "storybook",
+    "arabic",
+    "omani",
+    "bilingual",
+    "static-site"
+  ]
+}
