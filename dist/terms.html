@@ -6,6 +6,7 @@
 <title>الشروط | حكاية</title>
 <link rel="icon" type="image/svg+xml" href="assets/hikaya-symbol.svg">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://id.bhd-om.com/bhd-identity.js" defer></script>
 <style>
 :root{--ink:#164d42;--paper:#fff9eb;--muted:#5f6b63}
 *{box-sizing:border-box}body{margin:0;font-family:"Noto Sans Arabic","DM Sans",sans-serif;background:linear-gradient(180deg,#f7f3ea,#fff9eb);color:var(--ink);line-height:1.9}
@@ -57,10 +58,12 @@ h2{font-size:1.05rem;margin:22px 0 6px}p,li{color:var(--muted)}.note{background:
 <p><a href="/">← Back to Hikaya</a> · <a href="/privacy.html">Privacy</a> · <a href="/status.html">Status</a></p>
 </section>
 </main>
+<div id="bhd-programs-root"></div>
 <script>
 const root=document.body;
 document.getElementById('toEn').onclick=()=>root.classList.add('en');
 document.getElementById('toAr').onclick=()=>root.classList.remove('en');
 </script>
+<script src="bhd-programs.js" defer></script>
 </body>
 </html>

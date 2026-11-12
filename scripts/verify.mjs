@@ -13,7 +13,12 @@ async function check(relative) {
 const html = await readFile(path.join(dist, 'index.html'), 'utf8');
 const refs = [...html.matchAll(/(?:src|href)="([^"]+)"/g)]
   .map((match) => match[1])
-  .filter((ref) => !ref.startsWith('http') && !ref.startsWith('#') && !ref.startsWith('data:'));
+  .filter((ref) => {
+    if (!ref || ref.startsWith('http') || ref.startsWith('#') || ref.startsWith('data:')) return false;
+    // Site-absolute API / app routes are served by Vercel, not files under dist/
+    if (ref.startsWith('/api/') || ref.startsWith('/api?')) return false;
+    return true;
+  });
 
 const missing = [];
 for (const ref of refs) {

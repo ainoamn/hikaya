@@ -26,11 +26,14 @@
 - `DOCUMENTATION.md` — التوثيق التقني الشامل
 - `DEPLOY-VERCEL.md` — خطوات GitHub + Vercel
 - `FAMILY-FACES.md` — شرح تخصيص وجوه الأبناء
+- `BHD-PRODUCT-WIRE.md` — سلك SSO والكتالوج الحي مع هوية BHD
 - `FILES.md` — هذا الفهرس
 
 ## api/
 
 - `health.js` — نبض المنصة وحالة المراحل على Vercel
+- `lib/bhd-identity.js` — مساعد OIDC / كوكيز السلك
+- `auth/bhd/{start,callback,logout,rebind}.js` — نقاط دخول SSO الموحد
 - `README.md` — ما هو مفعّل وما هو مخطط
 
 ## platform/

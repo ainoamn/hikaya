@@ -6,6 +6,7 @@
 <title>حالة المنتج | حكاية</title>
 <link rel="icon" type="image/svg+xml" href="assets/hikaya-symbol.svg">
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;600;700&family=Noto+Sans+Arabic:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://id.bhd-om.com/bhd-identity.js" defer></script>
 <style>
 :root{--ink:#164d42;--ok:#2f6b4f;--wait:#9a6a2f;--no:#8a3f3f;--muted:#5f6b63}
 *{box-sizing:border-box}body{margin:0;font-family:"Noto Sans Arabic","DM Sans",sans-serif;background:linear-gradient(180deg,#f7f3ea,#fff9eb);color:var(--ink);line-height:1.8}
@@ -35,6 +36,7 @@ code{font-size:13px;background:#eef3ec;padding:2px 6px;border-radius:6px}
 <div class="item"><span>معاينة كتيّب متحركة</span><span class="badge ok">تجريبي</span></div>
 <div class="item"><span>قراءة صوتية</span><span class="badge wait">أصوات الجهاز</span></div>
 <div class="item"><span>وجوه من صورة جديدة (AI حي)</span><span class="badge no">غير مفعّل</span></div>
+<div class="item"><span>دخول BHD الموحد + شريط البرامج</span><span class="badge wait">سلك جاهز · env مطلوب</span></div>
 <div class="item"><span>حسابات ومكتبة سحابية</span><span class="badge no">غير مفعّل</span></div>
 <div class="item"><span>دفع إلكتروني</span><span class="badge no">غير مفعّل</span></div>
 <div class="item"><span>طباعة وشحن</span><span class="badge no">غير مفعّل</span></div>
@@ -52,6 +54,7 @@ code{font-size:13px;background:#eef3ec;padding:2px 6px;border-radius:6px}
 <div class="item"><span>Moving book preview</span><span class="badge ok">Demo</span></div>
 <div class="item"><span>Story reading aloud</span><span class="badge wait">Device voices</span></div>
 <div class="item"><span>Live face-from-photo AI</span><span class="badge no">Not enabled</span></div>
+<div class="item"><span>BHD unified login + programs strip</span><span class="badge wait">Wired · env required</span></div>
 <div class="item"><span>Accounts & cloud library</span><span class="badge no">Not enabled</span></div>
 <div class="item"><span>Payments</span><span class="badge no">Not enabled</span></div>
 <div class="item"><span>Print & shipping</span><span class="badge no">Not enabled</span></div>
@@ -60,10 +63,12 @@ code{font-size:13px;background:#eef3ec;padding:2px 6px;border-radius:6px}
 <p style="margin-top:22px"><a href="/">← Back</a> · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
 </section>
 </main>
+<div id="bhd-programs-root"></div>
 <script>
 const root=document.body;
 document.getElementById('toEn').onclick=()=>root.classList.add('en');
 document.getElementById('toAr').onclick=()=>root.classList.remove('en');
 </script>
+<script src="bhd-programs.js" defer></script>
 </body>
 </html>

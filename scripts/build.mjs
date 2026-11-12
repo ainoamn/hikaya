@@ -12,6 +12,7 @@ const required = [
   'styles.css',
   'atelier.css',
   'app.js',
+  'bhd-programs.js',
   'story-catalog.js',
   'more-stories.js',
   'gender-stories.js',
